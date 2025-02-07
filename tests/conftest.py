@@ -8,6 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def browser():
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
+    options.page_load_strategy = "eager"
     driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
     yield driver
     # driver.quit()
