@@ -36,7 +36,7 @@ class ModalWrapper(Base):
 
     # Getters
     def get_modal_wrapper_close(self):
-        return WebDriverWait(self.driver, 1).until(
+        return WebDriverWait(self.driver, 2).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, self.locator_modal_wrapper_close_css)))
 
     # Actions
