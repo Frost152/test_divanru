@@ -20,6 +20,7 @@ def test_buy_sofa(browser):
     filters.click_all_filters_button()
     filters.open_all_filters()
     filters.move_range_min("Размеры", "Длина,  см", 3)
-    fil = ("Банкетка", "Диван угловой", "Голубой", "Еврокнижка", "На низких опорах", "Трехместный", "Двуспальный", "Без подушек")
+    fil = ("Банкетка", "Диван угловой", "Голубой", "Еврокнижка", "На низких опорах", "Трехместный", "Двуспальный")
     filters.selecting_multiple_filters(*fil)
     filters.enter_filters(*fil)
+    catalog.buying_product_cart()

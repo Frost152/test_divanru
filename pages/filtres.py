@@ -35,7 +35,7 @@ class BaseFilters(Base):
             EC.element_to_be_clickable((By.CSS_SELECTOR, self.locator_all_filters_button_CSS)))
 
     def get_select_filter(self, filter_name):
-        return WebDriverWait(self.driver, 10).until(
+        return WebDriverWait(self.driver, 15).until(
             EC.element_to_be_clickable((By.XPATH, self.locator_select_filter_xpath.format(filter_name))))
 
     def get_apply_button(self):
@@ -158,6 +158,7 @@ class BaseFilters(Base):
     def open_all_filters(self):
         self.click_filter_disclosure_button()
         self.click_show_all_button()
+        print('Открыт блок фильтров')
 
     def selecting_multiple_filters(self, *args):
         for i in args:
@@ -178,3 +179,4 @@ class BaseFilters(Base):
         self.click_apply_button()
         tp = tuple([i.text for i in self.get_selected_filters_button()])
         # assert args in tp or args == tp
+        print('Выбраны необходимые фильтры')
