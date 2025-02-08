@@ -19,6 +19,7 @@ def test_buy_sofa(browser):
     filters = BaseFilters(driver)
     filters.click_all_filters_button()
     filters.open_all_filters()
-    fil = ("Банкетка", "Диван", "Кресло")
+    filters.move_range_min("Размеры", "Длина,  см", 3)
+    fil = ("Банкетка", "Диван угловой", "Голубой", "Еврокнижка", "На низких опорах", "Трехместный", "Двуспальный", "Без подушек")
     filters.selecting_multiple_filters(*fil)
     filters.enter_filters(*fil)
