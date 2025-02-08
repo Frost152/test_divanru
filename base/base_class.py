@@ -10,7 +10,7 @@ class Base:
     """Метод получения url страницы"""
 
     def get_current_url(self) -> str:
-        return self.driver.current_url
+        return str(self.driver.current_url)
 
     """Метод получения лого"""
 
