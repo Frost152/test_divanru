@@ -11,4 +11,5 @@ def browser():
     options.page_load_strategy = "eager"
     driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
     yield driver
+    # При необходимости закрывать браузер, раскомментировать строку 15
     # driver.quit()
