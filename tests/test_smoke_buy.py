@@ -31,4 +31,4 @@ def test_smoke_buy_sofa(browser):
     cp.order_confirmation("79995553535", "г Москва, ул Тестовская")
 
     # Что бы окончательно оформить заказ, необходимо раскомментировать строку 33
-    cp.order_finally()
+    # cp.order_finally()
