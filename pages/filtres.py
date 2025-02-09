@@ -170,10 +170,9 @@ class BaseFilters(Base):
     def selecting_range_filter(self, name_filter_set, range_block_name, min_param, max_param):
         min_param = int(min_param)
         max_param = int(max_param)
-        # self.move_range_min(name_filter_set, range_block_name, min_param)
-        # self.move_range_min(name_filter_set, range_block_name, -50)
-        self.move_range_max(name_filter_set, range_block_name, 80)
-        self.move_range_max(name_filter_set, range_block_name, -80)
+        self.move_range_min(name_filter_set, range_block_name, min_param)
+        self.move_range_max(name_filter_set, range_block_name, max_param)
+
 
     def enter_filters(self, *args):
         self.click_apply_button()
