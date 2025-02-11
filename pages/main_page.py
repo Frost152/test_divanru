@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 from base.base_class import Base
-from utilities.logger import Logger
+# from utilities.logger import Logger
 
 
 class MainPage(Base):
@@ -38,10 +38,10 @@ class MainPage(Base):
 
     # Methods
     def open(self):
-        Logger.add_start_step("open")
+        # Logger.add_start_step("open")
         self.driver.get(self.url)
         self.driver.maximize_window()
-        Logger.add_end_step(self.driver.current_url, "open")
+        # Logger.add_end_step(self.driver.current_url, "open")
 
     def transfer_to_cart(self):
         self.click_check()
