@@ -8,8 +8,8 @@ from base.base_class import Base
 
 class CartPage(Base):
     # Locators
-    locator_select_all_css = ".imlid"
-    locator_without_authorization_css = ".hFIoz"
+    locator_select_all_css = ".UfrIl"
+    locator_without_authorization_css = ".JpvQZ"
     locator_phone_css = "[name='OrderForm[mobile]']"
     locator_address_css = "[name='OrderForm[address]']"
     locator_check_out_button_css = "[data-testid='checkout-button']"
