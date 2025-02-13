@@ -85,6 +85,8 @@ class Catalog(MainPage):
         for i in self.get_buy_button():
             i.click()
             self.get_cart_modal_close().click()
+            break
+        #     заглушка для покупки первого товара
         print('Выбраны необходимые товары')
 
     # Methods
