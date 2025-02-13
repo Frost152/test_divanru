@@ -164,6 +164,8 @@ class BaseFilters(Base):
         for i in args:
             self.click_select_filter(i)
             self.get_apply_text_button()
+            break
+        #     заглушка для покупки только первого товара
         num = self.get_apply_button_num_text()
         print(f"Выбрано {num}")
 
