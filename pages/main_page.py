@@ -46,7 +46,7 @@ class MainPage(Base):
     def transfer_to_cart(self):
         self.click_check()
         assert "Корзина" in WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, ".CJo1Y"))).text
+            EC.element_to_be_clickable((By.CSS_SELECTOR, ".GFNlY"))).text
         print('Осуществлен переход в корзину')
 
 
